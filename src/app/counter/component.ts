@@ -12,7 +12,7 @@ export class CounterComponent {
     public count: number = 0;
     public countInterval: number = 1;
 
-    public incrementCount() {
+    public incrementCount(): void {
         if (this.count + this.countInterval > CounterComponent.MAX_THRESHOLD) {
             return;
         }
@@ -20,7 +20,7 @@ export class CounterComponent {
         this.count += this.countInterval;
     }
 
-    public decrementCount() {
+    public decrementCount(): void {
         if (this.count - this.countInterval < CounterComponent.MIN_THRESHOLD) {
             return;
         }
@@ -28,11 +28,11 @@ export class CounterComponent {
         this.count -= this.countInterval;
     }
 
-    public increaseCountInterval() {
+    public increaseCountInterval(): void {
         this.countInterval += 1;
     }
 
-    public decreaseCountInterval() {
+    public decreaseCountInterval(): void {
         if (this.countInterval === 1) {
             return;
         }
